@@ -5,316 +5,301 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bangladesh 2.0</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="icon" type="image/png" href="assets/hero.png">
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="assets/hero.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="index.css">
     <style>
         body {
-  font-family: "Fira Sans", sans-serif;
-}
-button:hover {
-      background-color: #bbe4d1;
-      transform: scale(1.05); /* Zoom effect */
-    }
+            font-family: "Fira Sans", sans-serif;
+            margin: 0;
+        }
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        button:hover {
+            background-color: #bbe4d1;
+            transform: scale(1.05);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        /* রেসপনসিভ করার জন্য নতুন ক্লাস */
+        .flex-container {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap; /* ছোট স্ক্রিনে কন্টেন্ট নিচে নামিয়ে দেবে */
+        }
+        .card {
+            flex: 1;
+            min-width: 250px; /* কার্ডের সর্বনিম্ন সাইজ */
+            background-color: white;
+            padding: 28px;
+            border-radius: 16px;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 0;
+        }
+        .header-text { flex: 1; min-width: 300px; }
+        .header-image { flex: 1; min-width: 300px; text-align: center; }
+        .header-image img { max-width: 100%; height: auto; }
+        
+        .news-item {
+            display: flex;
+            gap: 32px;
+            padding: 48px;
+            flex-wrap: wrap;
+            background-color: white;
+            border-radius: 14px;
+            margin-top: 24px;
+        }
+        .news-item > div { flex: 1; min-width: 300px; }
+        .news-item img { max-width: 100%; height: auto; border-radius: 8px; }
+
+        .donate-box {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .subscribe-form {
+            display: flex;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .subscribe-form input {
+            flex: 1;
+            border: none;
+            padding: 18px 20px;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+        
+        /* টেবিল রেসপনসিভ */
+        .table-responsive { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        
+        @media (max-width: 600px) {
+            .subscribe-form { flex-direction: column; gap: 10px; }
+            .subscribe-form input, .subscribe-form button { border-radius: 12px !important; }
+            .news-item { padding: 20px; }
+        }
     </style>
 </head>
-<body >
+<body>
     
-    <!-- navbar -->
-    <div style="background-color: rgb(236, 233, 233)
-;">
-         <nav class="navbar container" >
-        <h2 class="h1">Bangladesh 2.0</h2>
-        <button class="button">Sing in</button>
-     </nav>
+    <div style="background-color: rgb(236, 233, 233);">
+         <nav class="navbar container" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0;">
+            <h2 class="h1" style="margin: 0;">Bangladesh 2.0</h2>
+            <button class="button" style="padding: 10px 20px; border-radius: 8px; border: 1px solid #ccc;">Sign in</button>
+         </nav>
     </div>
 
+    <div style="background-color: rgb(236, 233, 233);">
+        <main class="container">
 
-    <!-- main section main  -->    <!-- main section main  -->    <!-- main section main  -->
-      <div style="background-color: rgb(236, 233, 233)
-;">
-         <main class="container" >
-
-       <!-- header  -->
-      <header class="header">
-        <!-- 1st  -->
-         <div style="gap: 12px;">
-            <h3 class="smtitle">Bangladesh 2.0</h3>
-            <h1 class="title">Idea , innovation , 
-                <br> 
-                vision and challenges in 
-                <br> 
-                New Bangladesh.</h1>
-            <button class="button-prymari">Explore New Bangladesh</button>
-         </div>
-         <!-- second -->
-          <div>
-            <img style="width: 474px; height: 400px;" src="assets/hero.png" alt="">
-          </div>
-      </header>
-
-      <!-- small box -->
-       <section>
-        <h1 class="comonHeader">Pillars of "Bangladesh 2.0"</h1>
-        <div style="display: flex; gap: 24px;">
-
-            <div style="background-color: white; padding: 28px; border-radius: 16px;">
-                <img src="assets/card-icon.png" alt="">
-                <div style="margin-top: 24px;">
-                    <h3>Innovation</h3>
-                    <p style="font-weight: 16px; color: rgb(116, 111, 111);">
-                        Dolor sit amet consectetur elit. Facilis quas, ducimus labore sequi quos </p>
+            <header class="header-content" style="background-color: #C6E4D6; border-radius: 24px; padding: 60px;">
+                <div class="header-text">
+                    <h3 class="smtitle" style="color: #006A50;">Bangladesh 2.0</h3>
+                    <h1 class="title" style="font-size: clamp(30px, 5vw, 56px); line-height: 1.2;">Idea, innovation, <br> vision and challenges in <br> New Bangladesh.</h1>
+                    <button class="button-prymari" style="background-color: #006A50; color: white; padding: 15px 30px; border: none; border-radius: 8px; font-weight: bold; margin-top: 20px;">Explore New Bangladesh</button>
                 </div>
-            </div>
-            <div style="background-color: white; padding: 28px; border-radius: 16px;">
-                <img src="assets/card-icon.png" alt="">
-                <div style="margin-top: 24px;">
-                    <h3>Sustainability</h3>
-                    <p style="font-weight: 16px; color: rgb(116, 111, 111);">
-                        Dolor sit amet consectetur elit. Facilis quas, ducimus labore sequi quos </p>
+                <div class="header-image">
+                    <img src="assets/hero.png" alt="Hero Image">
                 </div>
-            </div>
-            <div style="background-color: white; padding: 28px; border-radius: 16px;">
-                <img src="assets/card-icon.png" alt="">
-                <div style="margin-top: 24px;">
-                    <h3>Infrastructure</h3>
-                    <p style="font-weight: 16px; color: rgb(116, 111, 111);">
-                        Dolor sit amet consectetur elit. Facilis quas, ducimus labore sequi quos </p>
+            </header>
+
+            <section style="margin-top: 60px;">
+                <h1 class="comonHeader">Pillars of "Bangladesh 2.0"</h1>
+                <div class="flex-container">
+                    <div class="card">
+                        <img src="assets/card-icon.png" alt="">
+                        <div style="margin-top: 24px;">
+                            <h3>Innovation</h3>
+                            <p style="color: rgb(116, 111, 111);">Dolor sit amet consectetur elit. Facilis quas, ducimus labore sequi quos</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/card-icon.png" alt="">
+                        <div style="margin-top: 24px;">
+                            <h3>Sustainability</h3>
+                            <p style="color: rgb(116, 111, 111);">Dolor sit amet consectetur elit. Facilis quas, ducimus labore sequi quos</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/card-icon.png" alt="">
+                        <div style="margin-top: 24px;">
+                            <h3>Infrastructure</h3>
+                            <p style="color: rgb(116, 111, 111);">Dolor sit amet consectetur elit. Facilis quas, ducimus labore sequi quos</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/card-icon.png" alt="">
+                        <div style="margin-top: 24px;">
+                            <h3>Empowerment</h3>
+                            <p style="color: rgb(116, 111, 111);">Dolor sit amet consectetur elit. Facilis quas, ducimus labore sequi quos</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div style="background-color: white; padding: 28px; border-radius: 16px;">
-                <img src="assets/card-icon.png" alt="">
-                <div style="margin-top: 24px;">
-                    <h3>Empowerment</h3>
-                    <p style="font-weight: 16px; color: rgb(116, 111, 111);">
-                        Dolor sit amet consectetur elit. Facilis quas, ducimus labore sequi quos </p>
+            </section>
+
+            <section style="margin-top: 80px; margin-bottom: 80px;">
+                <h1 class="comonHeader">The Vision of Future</h1>
+                <p style="color: rgb(100, 98, 98); margin-bottom: 32px;">Bangladesh 2.0 aims to redefine the nation’s trajectory by embracing cutting-edge technology, promoting inclusive growth, and ensuring sustainability. With initiatives in renewable energy, digital transformation, and robust infrastructure, the country is set to become a global model of development.</p>
+                <div class="flex-container">
+                    <div class="card" style="background-color: #cadcf5;">
+                        <img src="assets/card-icon.png" alt="">
+                        <div style="margin-top: 24px;">
+                            <h3>Digital Transformation</h3>
+                            <p style="color: rgb(116, 111, 111);">Creating a nationwide digital ecosystem to enhance connectivity and access to services for all citizens.</p>
+                            <button style="color: white; background-color: #5490F5; padding: 11px 20px; border: 0 none; border-radius: 12px; margin-top: 16px;">Learn more</button> 
+                        </div>
+                    </div>
+                    <div class="card" style="background-color: #C6E4D6;">
+                        <img src="assets/card-icon.png" alt="">
+                        <div style="margin-top: 24px;">
+                            <h3>Green Energy</h3>
+                            <p style="color: rgb(116, 111, 111);">Investments in solar and wind energy to ensure a sustainable and eco-friendly future.</p>
+                            <button style="color: white; background-color: #09A15C; padding: 11px 20px; border: 0 none; border-radius: 12px; margin-top: 16px;">Learn more</button> 
+                        </div>
+                    </div>
+                    <div class="card" style="background-color: #F7EBCF;">
+                        <img src="assets/card-icon.png" alt="">
+                        <div style="margin-top: 24px;">
+                            <h3>Modern Infrastructure</h3>
+                            <p style="color: rgb(116, 111, 111);">Building state-of-the-art infrastructure to support economic growth and global competitiveness.</p>
+                            <button style="color: white; background-color: #FFC239; padding: 11px 20px; border: 0 none; border-radius: 12px; margin-top: 16px;">Learn more</button> 
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            
-            
-           
-        </div>
-       </section>
 
-        <!-- big box  -->
-        <section style="margin-top: 80px; margin-bottom: 80px;">
-        <h1 class="comonHeader">The Vision of Future</h1>
-        <p style="font-weight: 16px; color: rgb(100, 98, 98); margin-bottom: 32px;">Bangladesh 2.0 aims to redefine the nation’s trajectory by embracing cutting-edge technology, promoting inclusive growth, and ensuring sustainability. With initiatives in renewable energy, digital transformation, and robust infrastructure, the country is set to become a global model of development.</p>
-        <div style="display: flex; gap: 24px;">
-
-            <div style="background-color: #cadcf5; padding: 32px; border-radius: 16px;">
-                <img src="assets/card-icon.png" alt="">
-                <div style="margin-top: 24px;">
-                    <h3>Digital Transformation</h3>
-                    <p style="font-weight: 16px; color: rgb(116, 111, 111);">
-                        Creating a nationwide digital ecosystem to enhance connectivity and access to services for all citizens. </p>
-                       <button style="color: white; background-color: #5490F5; padding: 11px 20px; border: 0 none; border-radius: 12px; margin-top: 16px; margin-bottom: 22px;">Learn more</button> 
+                <div style="background-color: white; border-radius: 16px; margin-top: 32px; background-image: url(assets/quote-bg.png); background-repeat: no-repeat; background-position: 25px 34px ;">
+                    <div style="padding: 48px 24px;">
+                        <p style="color: rgb(116, 111, 111);">"We are moving forward, but our biggest challenge now is to heal the wounds caused by misrule and autocracy. For this, we need unity and coordination," Yunus said in a message issued today, one month after the fall of the Sheikh Hasina-led Awami League government. We all pledge that, as a nation, we will not allow the blood of the martyrs and the sacrifices of our injured brothers and sisters to be in vain. We will not let the opportunities they left us go to waste. Today, on this memorable day, we once again vow to build the new Bangladesh they dreamed of," he said.</p>
+                        <h3 style="margin-bottom: 6px; color: #393A3A;">Dr. Muhammad Yunus</h3>
+                        <h5 style="margin-top: 0; color: #a59d9d;">Chief Adviser of the People's Republic of Bangladesh</h5>
+                    </div>
                 </div>
-            </div>
-            <div style="background-color: #C6E4D6; padding: 32px; border-radius: 16px;">
-                <img src="assets/card-icon.png" alt="">
-                <div style="margin-top: 24px;">
-                    <h3>Green Energy</h3>
-                    <p style="font-weight: 16px; color: rgb(116, 111, 111);">
-                       Investments in solar and wind energy to ensure a sustainable and eco-friendly future. </p>
-                       <button style="color: white; background-color: #09A15C; padding: 11px 20px; border: 0 none; border-radius: 12px; margin-top: 16px; margin-bottom: 22px;">Learn more</button> 
+            </section>
+
+            <section style="margin-top: 100px;">
+                <h1 class="comonHeader">Your Opinion Matters</h1>
+                <div style="background-color: white; border-radius: 16px; padding: 20px;">
+                    <div class="table-responsive">
+                        <table border="1" style="border-collapse: collapse; border: 1px solid #ddd; width: 100%;" cellpadding="15">
+                            <thead style="background-color: #f8f8f8;">
+                                <tr>
+                                    <th align="left">Questions</th>
+                                    <th align="left">Select Your Opinion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Do you believe Bangladesh is on the right path toward becoming a developed nation?</td>
+                                    <td><select style="padding: 8px;"><option>Yes, I Agree</option></select></td>
+                                </tr>
+                                <tr>
+                                    <td>Do you believe Bangladesh is on the right path toward becoming a developed nation?</td>
+                                    <td><select style="padding: 8px;"><option>Yes, I Agree</option></select></td>
+                                </tr>
+                                <tr>
+                                    <td>Do you believe Bangladesh is on the right path toward becoming a developed nation?</td>
+                                    <td><select style="padding: 8px;"><option>Yes, I Agree</option></select></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
-            <div style="background-color: #F7EBCF; padding: 32px; border-radius: 16px;">
-                <img src="assets/card-icon.png" alt="">
-                <div style="margin-top: 24px;">
-                    <h3>Modern Infrastructure</h3>
-                    <p style="font-weight: 16px; color: rgb(116, 111, 111);">
-                        Building state-of-the-art infrastructure to support economic growth and global competitiveness. </p>
-                       <button style="color: white; background-color: #FFC239; padding: 11px 20px; border: 0 none; border-radius: 12px; margin-top: 16px; margin-bottom: 22px;">Learn more</button> 
+            </section>
+
+            <section style="margin-top: 80px;">
+                <h1 class="comonHeader">The Vision of Future</h1>
+                <p style="color: rgb(100, 98, 98); margin-bottom: 32px;">Bangladesh 2.0 aims to redefine the nation’s trajectory by embracing cutting-edge technology, promoting inclusive growth, and ensuring sustainability. With initiatives in renewable energy, digital transformation, and robust infrastructure, the country is set to become a global model of development.</p>
+
+                <div class="news-item">
+                    <div><img src="assets/satelite.png" alt=""></div>
+                    <div>
+                        <h2 style="margin: 0 0 16px 0;">Bangladesh Launches New Satellite</h2>
+                        <img src="assets/al-jazeera.png" alt="">
+                        <div style="display: flex; gap: 16px; margin: 10px 0;">
+                            <p style="color: #727070; margin:0;">Date: 05/01/2025</p>
+                            <p style="color: #727070; margin:0;">Time: 10.25 PM</p>
+                        </div>
+                        <p style="color: #B3B3B3;">Not until the creation and maintenance of decent conditions of life for all people are recognized and accepted as a common obligation of all people and all countries—not until then shall we...</p>
+                        <button style="width: 139px; height: 48px; background-color: #006A50; border-radius: 12px; color: white; font-weight: bold; border: none; margin-top: 20px;">Read More</button>
+                    </div>
                 </div>
-            </div>
-            
-            
-            
-           
-        </div>
 
-        <div style="background-color: white; border-radius: 16px; margin-top: 32px; background-image: url(assets/quote-bg.png); background-repeat: no-repeat; background-position: 25px 34px ;">
-
-            <div style="padding: 48px 24px;">
-                <p style="color: rgb(116, 111, 111);">"We are moving forward, but our biggest challenge now is to heal the wounds caused by misrule and autocracy. For this, we need unity and coordination," Yunus said in a message issued today, one month after the fall of the Sheikh Hasina-led Awami League government. We all pledge that, as a nation, we will not allow the blood of the martyrs and the sacrifices of our injured brothers and sisters to be in vain. We will not let the opportunities they left us go to waste. Today, on this memorable day, we once again vow to build the new Bangladesh they dreamed of," he said.</p>
-                <h3 style="margin-bottom: 6px; color: #393A3A;">Dr. Muhammad Yunus</h3>
-                <h5 style="margin-top: 0; color: #a59d9d;">Chief Adviser of the People's Republic of Bangladesh</h5>
-            </div>
-        </div>
-
-       </section>
-      
-       <!-- table section  -->
-       <section style="margin-top: 100px;">
-        <h1 class="comonHeader">Your Opinion Matters</h1>
-             
-        <div style="background-color: white; border-radius: 16px;">
-         <div style="padding: 32px;">
-            <table>
-    <thead>
-      <tr>
-        <th>Questions</th>
-        <th>Select Your Opinion</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Do you believe Bangladesh is on the right path toward becoming a developed nation?</td>
-        <td>
-          <select>
-            <option>Yes, I Agree</option>
-            
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>Do you believe Bangladesh is on the right path toward becoming a developed nation?</td>
-        <td>
-          <select>
-            <option>Yes, I Agree</option>
-            
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>Do you believe Bangladesh is on the right path toward becoming a developed nation?</td>
-        <td>
-          <select>
-            <option>Yes, I Agree</option>
-            
-          </select>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-           
-         </div>
-         
-        </div>
-       </section>
-
-         <!-- news section  -->
-        <section style="margin-top: 80px;">
-            <h1 class="comonHeader">The Vision of Future</h1>
-        <p style="font-weight: 16px; color: rgb(100, 98, 98); margin-bottom: 32px;">Bangladesh 2.0 aims to redefine the nation’s trajectory by embracing cutting-edge technology, promoting inclusive growth, and ensuring sustainability. With initiatives in renewable energy, digital transformation, and robust infrastructure, the country is set to become a global model of development.</p>
-
-        <div>
-
-            <div style="background-color: white; border-radius: 14px;">
-          <div style="display: flex; gap: 32px; padding: 48px;">
-            <div><img style="border-radius: 8px; " src="assets/satelite.png" alt=""></div>
-          <div>
-            <h2 style="margin-top: 12px; margin-bottom: 16px;">Bangladesh Launches New Satellite</h2>
-            <img  src="assets/al-jazeera.png" alt="">
-            <div style="display: flex; gap: 16px; margin-top: 2px; margin-bottom: auto;">
-                <p style="color: #727070;">Date: 05/01/2025  </p>
-                <p style="color: #727070;">Time: 10.25 PM</p>
-            </div>
-            <p style="margin-top: 2px; color: #B3B3B3;">Not until the creation and maintenance of decent conditions of life for all people are recognized and accepted as a common obligation of all people and all countries—not until then shall we,
-            with a certain degree of justification, be able to speak of humankind as civilized</p>
-            <button style="width: 139px; height: 48px; background-color: #006A50; border-radius: 12px; color: white; font-weight: bold; margin-top: 24px; margin-bottom: 2px; border: none;">Read More</button>
-          </div>
-          </div>  
-        </div>
-
-        <div style="background-color: white; border-radius: 14px; margin-top: 24px;"> 
-
-          <div style="display: flex; gap: 32px; padding: 48px;">
-          <div>
-            <h2 style="margin-top: 12px; margin-bottom: 16px;">Bangladesh Launches New Satellite</h2>
-            <img  src="assets/al-jazeera.png" alt="">
-            <div style="display: flex; gap: 16px; margin-top: 2px; margin-bottom: auto;">
-                <p style="color: #727070;">Date: 05/01/2025  </p>
-                <p style="color: #727070;">Time: 10.25 PM</p>
-            </div>
-            <p style="margin-top: 2px; color: #B3B3B3;">Not until the creation and maintenance of decent conditions of life for all people are recognized and accepted as a common obligation of all people and all countries—not until then shall we,
-            with a certain degree of justification, be able to speak of humankind as civilized</p>
-            <button style="width: 139px; height: 48px; background-color: #006A50; border-radius: 12px; color: white; font-weight: bold; margin-top: 24px; margin-bottom: 2px; border: none;">Read More</button>
-          </div>
-            <div><img style="border-radius: 8px; " src="assets/satelite.png" alt=""></div>
-          </div>  
-        </div>
-
-        <div style="background-color: white; border-radius: 14px; margin-top: 24px;">
-          <div style="display: flex; gap: 32px; padding: 48px;">
-            <div><img style="border-radius: 8px; " src="assets/satelite.png" alt=""></div>
-          <div>
-            <h2 style="margin-top: 12px; margin-bottom: 16px;">Bangladesh Launches New Satellite</h2>
-            <img  src="assets/al-jazeera.png" alt="">
-            <div style="display: flex; gap: 16px; margin-top: 2px; margin-bottom: auto;">
-                <p style="color: #727070;">Date: 05/01/2025  </p>
-                <p style="color: #727070;">Time: 10.25 PM</p>
-            </div>
-            <p style="margin-top: 2px; color: #B3B3B3;">Not until the creation and maintenance of decent conditions of life for all people are recognized and accepted as a common obligation of all people and all countries—not until then shall we,
-            with a certain degree of justification, be able to speak of humankind as civilized</p>
-            <button style="width: 139px; height: 48px; background-color: #006A50; border-radius: 12px; color: white; font-weight: bold; margin-top: 24px; margin-bottom: 2px; border: none;">Read More</button>
-          </div>
-          </div>  
-        </div>
-        </div>
-
-
-        </section>
-
-          <!-- donate section  -->
-         <section style="margin-top: 80px ; ;">
-            <h1 class="comonHeader" style="text-align: center;">Donate Today</h1>
-            <p style="text-align: center; color: #B3B3B3;">Bangladesh 2.0 aims to redefine the nation’s trajectory by embracing cutting-edge technology, promoting inclusive growth, and ensuring sustainability. With initiatives in renewable energy, digital transformation, and robust infrastructure.</p>
-
-            <div style="display: flex; gap: 24px; justify-content: center;">
-                <h2 style="text-align: center; background-color: white; padding: 40px; border-radius: 14px; border: #6e6e6e solid 1px; font-size: 40px; font-weight: 1000;">
-                    100 Taka</h2>
-            
-                    <h2 style="text-align: center; background-color: #C6E4D6; padding: 40px; border-radius: 14px; border: #C6E4D6 solid 1px; font-size: 40px; font-weight: 1000;">
-                    200 Taka</h2>
-                    <h2 style="text-align: center; background-color: white; padding: 40px; border-radius: 14px; border: #D5D6D8 solid 1px; font-size: 40px; font-weight: 1000;">
-                    500 Taka</h2>
-                    <h2 style="text-align: center; background-color: white; padding: 40px; border-radius: 14px; border: #D5D6D8 solid 1px; font-size: 40px; font-weight: 1000;">
-                    1000 Taka</h2>
-            </div>
-
-            <p > <input type="text" placeholder="Other Amount (Taka)" style="color: #D5D6D8; background-color: white; padding: 20px 320px; text-align: center; margin: 2px 122px; border: none; margin-bottom: 32px;"> 
-            </p>
-
-           <div style="align-items: center;">
-             <button class="button-prymari" style="display: block; color: white; padding: 17px 34px; border-radius: 8px; font-weight: bold; margin: 0 auto; background-color: #006A50; text-align: center; align-items: center; border: none;">Donate Now</button>
-           </div>
-
-
-         </section>
-
-             <!-- subscribe section  -->
-          <section style="background-color: #C6E4D6; border-radius: 16px; margin-top: 80px; margin-bottom: 60px;">
-            <div style="padding: 80px 265px;">
-                <h2 class="comonHeader" style="text-align: center; margin-bottom: 1px; margin-top: 0px;">Subscribe Newsletter</h2>
-                <p style="text-align: center; margin-top: 16px; color: rgb(177, 173, 173);">Bangladesh 2.0 aims to redefine the nation’s trajectory by embracing cutting-edge technology, promoting inclusive growth.</p>
-                <div style="display: flex;">
-                    <input style="border: none; padding:  18px 403px 18px 40px; border-top-left-radius: 12px; border-bottom-left-radius: 12px;" type="text" placeholder="Enter your email here"  >
-                    <button style="border: none; font-weight: bold; border-top-right-radius: 12px; border-bottom-right-radius: 12px; color: white; background-color: #006A50; padding: 17px 34px;">Subscribe</button>
+                <div class="news-item">
+                    <div style="order: 2;">
+                        <h2 style="margin: 0 0 16px 0;">Bangladesh Launches New Satellite</h2>
+                        <img src="assets/al-jazeera.png" alt="">
+                        <div style="display: flex; gap: 16px; margin: 10px 0;">
+                            <p style="color: #727070; margin:0;">Date: 05/01/2025</p>
+                            <p style="color: #727070; margin:0;">Time: 10.25 PM</p>
+                        </div>
+                        <p style="color: #B3B3B3;">Not until the creation and maintenance of decent conditions of life for all people are recognized and accepted as a common obligation of all people and all countries—not until then shall we...</p>
+                        <button style="width: 139px; height: 48px; background-color: #006A50; border-radius: 12px; color: white; font-weight: bold; border: none; margin-top: 20px;">Read More</button>
+                    </div>
+                    <div style="order: 1;"><img src="assets/satelite.png" alt=""></div>
                 </div>
-                <h4 style="text-align: center; color: rgba(54, 52, 52, 0.5); margin-bottom: 0px;">We promise not to spam you!</h4>
-            </div>
-          </section>
 
+                <div class="news-item">
+                    <div><img src="assets/satelite.png" alt=""></div>
+                    <div>
+                        <h2 style="margin: 0 0 16px 0;">Bangladesh Launches New Satellite</h2>
+                        <img src="assets/al-jazeera.png" alt="">
+                        <div style="display: flex; gap: 16px; margin: 10px 0;">
+                            <p style="color: #727070; margin:0;">Date: 05/01/2025</p>
+                            <p style="color: #727070; margin:0;">Time: 10.25 PM</p>
+                        </div>
+                        <p style="color: #B3B3B3;">Not until the creation and maintenance of decent conditions of life for all people are recognized and accepted as a common obligation of all people and all countries—not until then shall we...</p>
+                        <button style="width: 139px; height: 48px; background-color: #006A50; border-radius: 12px; color: white; font-weight: bold; border: none; margin-top: 20px;">Read More</button>
+                    </div>
+                </div>
+            </section>
 
+            <section style="margin-top: 80px; text-align: center;">
+                <h1 class="comonHeader">Donate Today</h1>
+                <p style="color: #B3B3B3; max-width: 800px; margin: 0 auto 40px;">Bangladesh 2.0 aims to redefine the nation’s trajectory by embracing cutting-edge technology, promoting inclusive growth, and ensuring sustainability.</p>
 
+                <div class="donate-box">
+                    <h2 style="background-color: white; padding: 40px; border-radius: 14px; border: 1px solid #ddd; min-width: 150px;">100 Taka</h2>
+                    <h2 style="background-color: #C6E4D6; padding: 40px; border-radius: 14px; border: 1px solid #C6E4D6; min-width: 150px;">200 Taka</h2>
+                    <h2 style="background-color: white; padding: 40px; border-radius: 14px; border: 1px solid #ddd; min-width: 150px;">500 Taka</h2>
+                    <h2 style="background-color: white; padding: 40px; border-radius: 14px; border: 1px solid #ddd; min-width: 150px;">1000 Taka</h2>
+                </div>
 
+                <div style="margin-bottom: 32px;">
+                    <input type="text" placeholder="Other Amount (Taka)" style="width: 100%; max-width: 600px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; text-align: center;">
+                </div>
+                <button style="background-color: #006A50; color: white; padding: 17px 60px; border-radius: 8px; font-weight: bold; border: none;">Donate Now</button>
+            </section>
 
-  </main>
+            <section style="background-color: #C6E4D6; border-radius: 16px; margin-top: 80px; margin-bottom: 60px; padding: 60px 20px; text-align: center;">
+                <h2 class="comonHeader" style="margin: 0;">Subscribe Newsletter</h2>
+                <p style="color: rgb(116, 111, 111); margin: 16px 0 32px;">Bangladesh 2.0 aims to redefine the nation’s trajectory by embracing cutting-edge technology, promoting inclusive growth.</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter your email here">
+                    <button style="border: none; font-weight: bold; border-top-right-radius: 12px; border-bottom-right-radius: 12px; color: white; background-color: #006A50; padding: 0 30px;">Subscribe</button>
+                </div>
+                <h4 style="color: rgba(54, 52, 52, 0.5); margin-top: 20px;">We promise not to spam you!</h4>
+            </section>
+        </main>
+    </div>
 
-      </div>
-    
- 
-
-  <!-- footer section  -->
-  <footer style="background-color: white;">
-    <h2 style="text-align: center;" class="h1">Bangladesh 2.0</h2>
-  </footer>
+    <footer style="background-color: white; padding: 40px 0; text-align: center;">
+        <h2 class="h1" style="margin: 0;">Bangladesh 2.0</h2>
+    </footer>
 
 </body>
 </html>
